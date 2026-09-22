@@ -1,0 +1,555 @@
+/* =========================================
+   1. General Styles & Reset
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Common Text & Buttons */
+.primary-text {
+    color: yellowgreen;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    border: 1px solid white;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+    color: yellowgreen;
+    border: 1px solid yellowgreen;
+}
+
+.btn-secondary {
+    color: white;
+    background: #383848;
+    margin-top: 2rem;
+    transition: 0.2s ease-in-out;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.btn-secondary:hover {
+    color: #383848;
+    background: white;
+    border: 1px solid #383848;
+}
+
+section {
+    min-height: 100vh;
+    padding: 12rem 15%;
+}
+
+/* =========================================
+   2. Header & Navigation
+========================================== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 15%;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+header img {
+    width: 80px;
+}
+
+.fa-bars {
+    display: none;
+}
+
+#navbar a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.2s ease-in-out;
+    margin-left: 4rem;
+}
+
+#navbar a:hover {
+    border-bottom: 3px solid yellowgreen;
+}
+
+/* =========================================
+   3. Home Section
+========================================== */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/background.jpg) center center/cover no-repeat;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#home * {
+    z-index: 100;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#content h1 {
+    font-size: 5rem;
+    color: white;
+}
+
+#content p {
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: white;
+}
+
+#content a {
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+/* =========================================
+   4. About Section
+========================================== */
+#about {
+    padding-top: 25rem;
+    background: #f4f4f4;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.title h2 {
+    font-size: 4rem;
+    color: #383848;
+    margin-bottom: 2rem;
+}
+
+#about .title p {
+    font-size: 2rem;
+    color: #383848;
+    font-weight: 600;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.about-content img {
+    width: 450px;
+    height: auto;
+    align-self: center;
+    max-width: 100%;
+}
+
+.about-content p {
+    color: #9a9a9a;
+    margin-right: 7rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================================
+   5. Offers Section
+========================================== */
+#offers {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    background: url(images/background.jpg) center center/cover fixed;
+    position: relative;
+}
+
+#offers::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(39, 39, 39, 0.943);
+}
+
+#offers * {
+    z-index: 100;
+}
+
+#offers .container .title h2 {
+    color: yellowgreen;
+}
+
+#offers .container .title p {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+}
+
+.offer-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10rem;
+}
+
+.offer-items h3 {
+    font-size: 3rem;
+    color: white;
+    margin: 1.5rem 0;
+}
+
+.offer-items p {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+del {
+    text-decoration: line-through;
+    color: #9a9a9a;
+    margin-right: 1rem;
+}
+
+/* =========================================
+   6. Menu Section
+========================================== */
+#menu {
+    background: #f4f4f4;
+    padding: 5rem 25rem;
+}
+
+#menu p {
+    color: #383848;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-items img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.menu-items h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    border-bottom: 1px dashed #c2bdbd;
+    padding: 10px;
+    position: relative;
+}
+
+.menu-items p {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 40px;
+    border: 1px solid #c2bdbd;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    transition: 0.2s ease-in-out;
+    background: white;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.menu-item span {
+    position: absolute;
+    right: 0;
+}
+
+/* =========================================
+   7. Daytime Section
+========================================== */
+#daytime {
+    background: url(images/daytime_bg.jpeg) center center/cover fixed no-repeat;
+    color: white;
+    text-align: center;
+    min-height: auto;
+}
+
+.daytime-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.daytime-items h3 {
+    font-size: 3rem;
+    margin: 20px 0 10px;
+}
+
+.daytime-items p {
+    font-size: 2rem;
+}
+
+/* =========================================
+   8. Contact Section
+========================================== */
+#contact {
+    min-height: auto;
+    background-color: #f4f4f4;
+}
+
+#contact h3 {
+    font-size: 3rem;
+}
+
+#contact p {
+    font-size: 2rem;
+}
+
+#contact a {
+    font-size: 4rem;
+}
+
+#contact .contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-info div {
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.contact-info h3 {
+    color: #383848;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #9a9a9a;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    border: 1px solid #383848;
+    background-color: #383848;
+    color: white;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.contact-info a:hover {
+    color: #383848;
+    border: 1px solid #383848;
+    background-color: white;
+}
+
+/* Form Styles */
+form input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 20px 15px;
+    margin: 20px 0;
+    border: none;
+    background-color: #e3e2dd;
+    border-radius: 10px;
+    font-family: "Roboto Mono", monospace;
+}
+
+#contact .btn {
+    background: yellowgreen;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+#contact .contact-content form {
+    width: 40%;
+}
+
+#contact .btn:hover {
+    background-color: #383848;
+}
+
+/* =========================================
+   9. Media Queries (Responsive Design)
+========================================== */
+@media(max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    section {
+        padding: 10rem 5%;
+    }
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-content p {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    .about-content img {
+        margin-top: 3rem;
+        width: 100%;
+        max-width: 600px;
+    }
+    .offer-items {
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    .fa-bars {
+        display: block;
+        font-size: 3rem;
+        color: yellowgreen;
+        cursor: pointer;
+    }
+    
+    /* Mobile Menu Settings */
+    #navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 30%;
+        padding: 1rem 3rem;
+        background: rgba(0, 0, 0, 0.7);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid yellowgreen;
+        border-bottom: 2px solid yellowgreen;
+        display: none;
+    }
+    #navbar a {
+        display: block;
+        font-size: 2rem;
+        margin-top: 1.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    #navbar.active {
+        display: block;
+    }
+    #menu {
+        padding: 5rem 0rem;
+    }
+    #contact .contact-content{
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    #content p {
+        font-size: 2rem;
+    }
+    .offer-items {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    #navbar {
+        width: 40%;
+    }
+    .daytime-items {
+        flex-direction: column;
+    }
+    .daytime-item {
+        margin-top: 50px;
+    }
+    #contact .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    #contact .contact-content form {
+        width: 80%;
+        margin-top: 3rem;
+    }
+    #contact .contact-content{
+        align-items: center;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 0.45rem;
+    }
+    #navbar {
+        width: 60%;
+    }
+    .menu-items {
+        flex-direction: column;
+    }
+    #contact .contact-content form {
+        width: 90%;
+    }
+    #contact .contact-content{
+        align-items: center;
+    }
+}
